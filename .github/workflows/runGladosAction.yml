@@ -28,4 +28,4 @@ jobs:
         env: 
           GLADOS_COOKIE: "${{ secrets.GLADOS_COOKIE }}"
           PUSHPLUS_TOKEN: ${{ secrets.PUSHPLUS_TOKEN }}
-      - uses: yerfor/keepalive-workflow@master  
+      - uses: yerfor/gh-workflow-keepalive@master  
