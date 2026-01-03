@@ -8,7 +8,9 @@ if __name__ == '__main__':
 # 推送内容
     sendContent = ''
 # glados账号cookie 直接使用数组 如果使用环境变量需要字符串分割一下
-    cookies = os.environ.get("GLADOS_COOKIE", []).split("&")
+    # cookies = os.environ.get("GLADOS_COOKIE", []).split("&")
+    # https://github.com/Devilstore/Gladoscheckin
+    cookies = ["koa:sess=eyJ1c2VySWQiOjYwMzAxNSwiX2V4cGlyZSI6MTc5MzM4MjI0NjQ4NCwiX21heEFnZSI6MjU5MjAwMDAwMDB9; koa:sess.sig=qEgK9psvfyTKL1Ygw4IwhjUmKGI"]
     if cookies[0] == "":
         print('未获取到COOKIE变量') 
         cookies = []
