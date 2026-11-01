@@ -35,6 +35,10 @@ if __name__ == '__main__':
         mess = checkin.get('message', json.dumps(checkin, ensure_ascii=False))
         line = f"{email}----结果--{mess}----剩余({left})天"
         print(line)
+        # Only "Checkin! Got N Points" / "Checkin Repeats! ..." mean the check-in went through.
+        if not str(mess).startswith('Checkin'):
+            print(f"account #{i}: check-in NOT accepted by GLaDOS: {mess}")
+            failed = True
         send_content += line + '\n'
 
     if sckey:
